@@ -1,0 +1,47 @@
+# based on https://github.com/eduardoboucas/staticman/blob/master/staticman.sample.yml
+comments:
+  allowedFields: ["name", message"]
+  branch: "master"
+  commitMessage: "New user comment sent via staticman"
+  filename: "entry{@timestamp}"
+  format: "yaml"
+
+  # List of fields to be populated automatically by Staticman
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+
+  # Whether entries need to be appproved before they are published
+  moderation: true
+
+  # Name of the site. Used in notification emails.
+  name: "danieldreke.com"
+
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a reply or a new comment. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  #notifications:
+    # Enable notifications
+    #enabled: true
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun API key
+    #apiKey: "1q2w3e4r"
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun domain (encrypted)
+    #domain: "4r3e2w1q"
+
+  # Destination path (directory) for the data files. Accepts placeholders.
+  path: "_data/comments/{options.slug}"
+
+  # Names of required fields
+  requiredFields: ["name", "message"]
+
+  # List of transformations to apply to any of the fields supplied.
+  transforms:
+    email: md5
