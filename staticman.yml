@@ -16,7 +16,7 @@ comments:
     sha: "feb1bc9974bf94710e538f3281e61d34d3e25195"
 
   # Whether entries need to be appproved before they are published
-  moderation: false
+  moderation: true
 
   # Name of the site. Used in notification emails.
   name: "danieldreke.com"
