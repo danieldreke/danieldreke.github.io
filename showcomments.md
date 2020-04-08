@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-{% assign comments = site.data.comments | sort %}
+{% assign comments = site.data.comments sort %}
 {% for comment in comments %}
   {% assign name = comment[1].name %}
   {% assign date = comment[1].date %}
