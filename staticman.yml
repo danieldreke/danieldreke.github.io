@@ -3,8 +3,7 @@ comments:
   allowedFields: ["name", "message"]
   branch: "master"
   commitMessage: "New user comment sent via staticman"
-  #filename: "entry{@timestamp}"
-  filename: "testing_overwrite"
+  filename: "entry{@timestamp}"
   format: "yaml"
 
   # List of fields to be populated automatically by Staticman
@@ -13,37 +12,12 @@ comments:
       type: date
       options:
         format: "iso8601"
-    sha: "feb1bc9974bf94710e538f3281e61d34d3e25195"
 
   # Whether entries need to be appproved before they are published
-  moderation: false
-
-  # Name of the site. Used in notification emails.
-  name: "danieldreke.com"
-
-  # Notification settings. When enabled, users can choose to receive notifications
-  # via email when someone adds a reply or a new comment. This requires an account
-  # with Mailgun, which you can get for free at http://mailgun.com.
-  #notifications:
-    # Enable notifications
-    #enabled: true
-
-    # (!) ENCRYPTED
-    #
-    # Mailgun API key
-    #apiKey: "1q2w3e4r"
-
-    # (!) ENCRYPTED
-    #
-    # Mailgun domain (encrypted)
-    #domain: "4r3e2w1q"
+  moderation: true
 
   # Destination path (directory) for the data files. Accepts placeholders.
   path: "_data/comments/"
 
   # Names of required fields
   requiredFields: ["name", "message"]
-
-  # List of transformations to apply to any of the fields supplied.
-  transforms:
-    email: md5
