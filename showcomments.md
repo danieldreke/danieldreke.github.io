@@ -1,4 +1,5 @@
 ---
+layout: null
 ---
 {% assign comments = site.data.comments | sort %}
 {% for comment in comments %}
