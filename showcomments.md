@@ -7,6 +7,6 @@ layout: null
   {% assign date = comment[1].date %}
   {% assign message = comment[1].message %}
   {{ name }}<br>
-  {{ date }}<br>
+  {{ date | date: '%a %-d %b %Y @%H:%M' }}<br>
   {{ message }}<br>
 {% endfor %}
