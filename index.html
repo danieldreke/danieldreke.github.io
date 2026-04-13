@@ -1,11 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Dreke</title>
+  <meta name="description" content="Open source projects by Daniel Dreke — developer tools, web apps, and utilities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Hello World!
+
+  <canvas id="bg"></canvas>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">
+    <!-- icon set by JS -->
+  </button>
+  <button class="theme-toggle" id="starToggle" style="right:68px" aria-label="Toggle star mode">
+    <!-- icon set by JS -->
+  </button>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <header class="hero">
+      <!-- <div class="hero-avatar">DD</div> -->
+      <h1><span>Daniel</span> Dreke</h1>
+      <!-- <p>Building open source tools and web apps — free, offline-friendly, and focused on utility.</p> -->
+      <!-- <p>Building open source tools and web apps — <br>focus on usabilty, safety and privacy</p> -->
+       <p>Building open source tools and web apps</p>
+      <div class="hero-links">
+        <a href="https://github.com/danieldreke" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg class="icon-gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub Profile
+        </a>
+      </div>
+    </header>
+
+    <!-- Projects -->
+    <section class="projects">
+
+      <div class="grid">
+
+        <!-- 1: website-blocker-linux -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(53,114,165,.15);">🛡️</div>
+            <div class="card-meta">
+              <span class="lang-badge">
+                <span class="lang-dot" style="background:var(--py)"></span>
+                Python
+              </span>
+            </div>
+          </div>
+          <h3>Website Blocker · Linux</h3>
+          <p>Block distracting websites at the system level to protect your time and focus. A no-frills CLI tool for Linux.</p>
+          <div class="card-actions">
+            <a href="https://github.com/danieldreke/website-blocker-linux" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <svg class="icon-gh" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- 2: qr-code-generator -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(240,192,32,.12);">⬛</div>
+            <div class="card-meta">
+              <span class="lang-badge">
+                <span class="lang-dot" style="background:var(--js)"></span>
+                JavaScript
+              </span>
+            </div>
+          </div>
+          <h3>QR Code Generator</h3>
+          <p>Generate QR codes entirely in the browser — no server, no tracking, fully offline-capable.</p>
+          <div class="card-actions">
+            <a href="https://danieldreke.github.io/qr-code-generator/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Open ↗</a>
+            <a href="https://github.com/danieldreke/qr-code-generator" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <svg class="icon-gh" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- 3: matrixcode -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(0,212,100,.12);">🟩</div>
+            <div class="card-meta">
+              <span class="lang-badge">
+                <span class="lang-dot" style="background:var(--html)"></span>
+                HTML
+              </span>
+            </div>
+          </div>
+          <h3>Matrix Code</h3>
+          <p>An interactive Matrix digital rain effect rendered in the browser — pure HTML, CSS, and canvas.</p>
+          <div class="card-actions">
+            <a href="https://danieldreke.github.io/matrixcode/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Open ↗</a>
+            <a href="https://github.com/danieldreke/matrixcode" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <svg class="icon-gh" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- 4: fuel-cost-calculator-webapp -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(240,192,32,.12);">⛽</div>
+            <div class="card-meta">
+              <span class="lang-badge">
+                <span class="lang-dot" style="background:var(--js)"></span>
+                JavaScript
+              </span>
+            </div>
+          </div>
+          <h3>Fuel Cost Calculator</h3>
+          <p>Calculate trip fuel costs quickly. An installable PWA — works offline and on mobile like a native app.</p>
+          <div class="card-actions">
+            <a href="https://danieldreke.github.io/fuel-cost-calculator-webapp/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Open ↗</a>
+            <a href="https://github.com/danieldreke/fuel-cost-calculator-webapp" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <svg class="icon-gh" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- 5: wim-hof-breathing-session -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(100,180,255,.12);">🌬️</div>
+            <div class="card-meta">
+              <span class="lang-badge">
+                <span class="lang-dot" style="background:var(--js)"></span>
+                JavaScript
+              </span>
+              <span class="lang-badge" style="background:var(--accent-badge); color:var(--accent);">★ 1</span>
+            </div>
+          </div>
+          <h3>Wim Hof Breathing</h3>
+          <p>A guided Wim Hof breathing session as a web app — visual cues, timed rounds, and retention holds.</p>
+          <div class="card-actions">
+            <a href="https://danieldreke.github.io/wim-hof-breathing-session/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Open ↗</a>
+            <a href="https://github.com/danieldreke/wim-hof-breathing-session" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <svg class="icon-gh" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- 6: software-solutions -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon" style="background:var(--accent-icon);">💡</div>
+            <div class="card-meta">
+              <span class="lang-badge" style="background:var(--accent-badge); color:var(--accent);">★ 1</span>
+            </div>
+          </div>
+          <h3>Software Solutions</h3>
+          <p>A curated collection of software solutions, utilities, and development resources published as a web resource.</p>
+          <div class="card-actions">
+            <a href="https://danieldreke.github.io/software-solutions/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Open ↗</a>
+            <a href="https://github.com/danieldreke/software-solutions" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <svg class="icon-gh" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const MOON = `<svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>`;
+    const SUN  = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+    const toggleBtn = document.getElementById('themeToggle');
+
+    const applyTheme = (light) => {
+      document.body.classList.toggle('light', light);
+      toggleBtn.innerHTML = light ? MOON : SUN;
+      localStorage.setItem('theme', light ? 'light' : 'dark');
+    };
+
+    applyTheme(localStorage.getItem('theme') === 'light');
+    toggleBtn.addEventListener('click', () => {
+      applyTheme(!document.body.classList.contains('light'));
+    });
+
+    // Relative luminance of hsl(h, 100%, 60%) — used to detect bright accent colors
+    function accentLuminance(h) {
+      const s = 1, l = 0.6;
+      const a = s * Math.min(l, 1 - l);
+      const f = n => { const k = (n + h/30) % 12; return l - a * Math.max(-1, Math.min(k-3, 9-k, 1)); };
+      const lin = c => c <= 0.04045 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4);
+      return 0.2126*lin(f(0)) + 0.7152*lin(f(8)) + 0.0722*lin(f(4));
+    }
+
+    let hue = 210, lastX = null, lastY = null;
+
+    document.addEventListener('mousemove', (e) => {
+      if (lastX === null) { lastX = e.clientX; lastY = e.clientY; return; }
+      const dx = e.clientX - lastX, dy = e.clientY - lastY;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      hue += dist * 0.1;
+      hue = hue > 360 ? 0 : hue;
+      document.documentElement.style.setProperty('--hue', Math.round(hue));
+      // shadow on button text when accent is bright enough to clash with white
+      document.body.classList.toggle('bright-accent', accentLuminance(hue) > 0.18);
+      lastX = e.clientX; lastY = e.clientY;
+    });
+
+    // ── Star field ──
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let W, H, mx = innerWidth/2, my = innerHeight/2;
+
+    function resize() { W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
+    window.addEventListener('resize', resize);
+    resize();
+    window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+    const layers = [
+      Array.from({length: 320}, () => ({
+        x: Math.random(), y: Math.random(),
+        r: 0.8 + Math.random() * 0.6,
+        base: 0.12 + Math.random() * 0.22,
+        swing: 0.06 + Math.random() * 0.10,
+        spd: 0.04 + Math.random() * 0.12,
+        phase: Math.random() * Math.PI * 2,
+      })),
+      Array.from({length: 100}, (_, i) => ({
+        x: Math.random(), y: Math.random(),
+        r: i < 6 ? 1.4 + Math.random() * 0.8 : 0.8 + Math.random() * 0.5,
+        base: i < 6 ? 0.55 + Math.random() * 0.30 : 0.22 + Math.random() * 0.22,
+        swing: i < 6 ? 0.20 : 0.10,
+        spd: 0.03 + Math.random() * 0.08,
+        phase: Math.random() * Math.PI * 2,
+      })),
+    ];
+    const PULL  = [0.016, 0.032];
+    const DRIFT = [10,    20   ];
+
+    const starToggleBtn = document.getElementById('starToggle');
+    const MOUSE_ICON = `<svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="16" rx="5"/><line x1="12" y1="6" x2="12" y2="10"/></svg>`;
+    const DRIFT_ICON = `<svg viewBox="0 0 24 24"><line x1="5" y1="8" x2="19" y2="8"/><line x1="5" y1="12" x2="19" y2="12"/><line x1="5" y1="16" x2="19" y2="16"/><polyline points="15,4 19,8 15,12"/></svg>`;
+
+    let driftMode = localStorage.getItem('starMode') === 'drift';
+    let driftOffset = 0;
+
+    const applyStarMode = (drift) => {
+      driftMode = drift;
+      starToggleBtn.innerHTML = drift ? MOUSE_ICON : DRIFT_ICON;
+      localStorage.setItem('starMode', drift ? 'drift' : 'mouse');
+    };
+    applyStarMode(driftMode);
+    starToggleBtn.addEventListener('click', () => applyStarMode(!driftMode));
+
+    function draw(t) {
+      if (driftMode) driftOffset += 0.015;
+      ctx.clearRect(0, 0, W, H);
+      const isLightMode = document.body.classList.contains('light');
+      layers.forEach((stars, li) => {
+        const pull = PULL[li];
+        const ox = driftMode ? -(driftOffset * DRIFT[li]) : (mx - W/2) * pull;
+        const oy = driftMode ? 0 : (my - H/2) * pull;
+        for (const s of stars) {
+          const alpha = s.base + s.swing * Math.abs(Math.sin(t * s.spd * 0.0001 + s.phase));
+          const x = driftMode ? ((s.x * W + ox) % W + W) % W : s.x * W + ox;
+          ctx.beginPath();
+          ctx.arc(x, s.y * H + oy, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = isLightMode ? `rgba(0,0,0,${alpha})` : `rgba(230,240,255,${alpha})`;
+          ctx.fill();
+        }
+      });
+      requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+  </script>
+
 </body>
 </html>
