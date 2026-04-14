@@ -42,17 +42,10 @@ window.addEventListener('scroll', () => {
 document.addEventListener('touchstart', (e) => {
   const t = e.touches[0];
   lastX = t.clientX; lastY = t.clientY;
-  if (!e.target.closest('.card')) {
-    document.querySelectorAll('.card.active').forEach(c => c.classList.remove('active'));
-  }
+  const card = e.target.closest('.card');
+  document.querySelectorAll('.card.active').forEach(c => c.classList.remove('active'));
+  if (card) card.classList.add('active');
 }, { passive: true });
-
-document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('touchstart', () => {
-    document.querySelectorAll('.card.active').forEach(c => c.classList.remove('active'));
-    card.classList.add('active');
-  }, { passive: true });
-});
 
 // ── Star field ──
 const canvas = document.getElementById('bg');
