@@ -179,7 +179,7 @@ body {
   animation: fadeUp 0.5s ease both;
 }
 
-.card:hover {
+.card:hover, .card.active {
   background: var(--accent-dim);
   border-color: var(--accent);
   transform: translateY(-3px);

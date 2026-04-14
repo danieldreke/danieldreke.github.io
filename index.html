@@ -179,18 +179,37 @@
     }
 
     let hue = 210, lastX = null, lastY = null;
+    let autoSpeed = 0.08; // baseline drift speed
 
-    document.addEventListener('mousemove', (e) => {
-      if (lastX === null) { lastX = e.clientX; lastY = e.clientY; return; }
-      const dx = e.clientX - lastX, dy = e.clientY - lastY;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      hue += dist * 0.1;
-      hue = hue > 360 ? 0 : hue;
+    function applyHue() {
+      hue = (hue + autoSpeed) % 360;
       document.documentElement.style.setProperty('--hue', Math.round(hue));
-      // shadow on button text when accent is bright enough to clash with white
       document.body.classList.toggle('bright-accent', accentLuminance(hue) > 0.18);
-      lastX = e.clientX; lastY = e.clientY;
-    });
+      requestAnimationFrame(applyHue);
+    }
+    requestAnimationFrame(applyHue);
+
+    function handleMove(x, y) {
+      if (lastX === null) { lastX = x; lastY = y; return; }
+      const dist = Math.sqrt((x - lastX) ** 2 + (y - lastY) ** 2);
+      hue = (hue + dist * 0.1) % 360;
+      lastX = x; lastY = y;
+    }
+
+    document.addEventListener('mousemove', (e) => handleMove(e.clientX, e.clientY));
+
+    document.addEventListener('touchmove', (e) => {
+      const t = e.touches[0];
+      handleMove(t.clientX, t.clientY);
+    }, { passive: true });
+
+    document.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      lastX = t.clientX; lastY = t.clientY;
+      const card = e.target.closest('.card');
+      document.querySelectorAll('.card.active').forEach(c => c.classList.remove('active'));
+      if (card) card.classList.add('active');
+    }, { passive: true });
 
     // ── Star field ──
     const canvas = document.getElementById('bg');
