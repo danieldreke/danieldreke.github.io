@@ -203,6 +203,13 @@
       handleMove(t.clientX, t.clientY);
     }, { passive: true });
 
+    let lastScroll = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const delta = Math.abs(window.scrollY - lastScroll);
+      hue = (hue + delta * 0.2) % 360;
+      lastScroll = window.scrollY;
+    }, { passive: true });
+
     document.addEventListener('touchstart', (e) => {
       const t = e.touches[0];
       lastX = t.clientX; lastY = t.clientY;
