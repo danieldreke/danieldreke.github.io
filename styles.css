@@ -2,17 +2,17 @@
 
 :root {
   --hue:         210;
-  --bg:          #02020a;
-  --border:      #131d30;
-  --border-h:    #1e2e4a;
+  --bg:          #0a0a0a;
+  --border:      #1e1e1e;
+  --border-h:    #2e2e2e;
   --accent:        hsl(var(--hue), 100%, 60%);
   --accent-dim:    hsla(var(--hue), 100%, 60%, 0.12);
   --accent-glow:   hsla(var(--hue), 100%, 60%, 0.07);
   --accent-badge:  hsla(var(--hue), 100%, 60%, 0.10);
   --accent-icon:   hsla(var(--hue), 100%, 60%, 0.12);
-  --text:        #dce8f5;
-  --muted:       #4d6080;
-  --muted-2:     #8097b8;
+  --text:        #e8e8e8;
+  --muted:       #505050;
+  --muted-2:     #909090;
   --radius:      14px;
   --py:     #3572A5;
   --js:     #f0c020;
