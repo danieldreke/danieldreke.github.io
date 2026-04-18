@@ -177,23 +177,66 @@ body {
   flex-direction: column;
   gap: 12px;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  animation: fadeUp 0.5s ease both;
+  /* animation: fadeUp 0.5s ease both; */
+}
+
+@keyframes card-breathe {
+  0%, 100% {
+    box-shadow:
+      0 12px 40px rgba(0,0,0,0.5),
+      0 0 6px var(--accent),
+      0 0 14px hsla(var(--hue), 100%, 60%, 0.6),
+      0 0 30px hsla(var(--hue), 100%, 60%, 0.35),
+      0 0 60px hsla(var(--hue), 100%, 60%, 0.15);
+    border-color: var(--accent);
+  }
+  70% {
+    box-shadow:
+      0 12px 40px rgba(0,0,0,0.5),
+      0 0 1px hsla(var(--hue), 100%, 60%, 0.2),
+      0 0 3px hsla(var(--hue), 100%, 60%, 0.08),
+      0 0 8px hsla(var(--hue), 100%, 60%, 0.04),
+      0 0 16px hsla(var(--hue), 100%, 60%, 0.02);
+    border-color: hsla(var(--hue), 100%, 60%, 0.25);
+  }
 }
 
 @media (hover: hover) {
   .card:hover {
-    background: var(--accent-dim);
+    background:
+      radial-gradient(ellipse at top left,     hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+      radial-gradient(ellipse at top right,    hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+      radial-gradient(ellipse at bottom left,  hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+      radial-gradient(ellipse at bottom right, hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+      rgba(255,255,255,0.05);
     border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 24px var(--accent-glow);
+    /* transform: translateY(-3px); */
+    box-shadow:
+      0 12px 40px rgba(0,0,0,0.5),
+      0 0 6px var(--accent),
+      0 0 14px hsla(var(--hue), 100%, 60%, 0.6),
+      0 0 30px hsla(var(--hue), 100%, 60%, 0.35),
+      0 0 60px hsla(var(--hue), 100%, 60%, 0.15);
+    animation: card-breathe 2.5s ease-in-out 0s infinite;
   }
 }
 
 .card.active {
-  background: var(--accent-dim);
+  background:
+    radial-gradient(ellipse at top left,     hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at top right,    hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom left,  hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, hsla(var(--hue), 100%, 60%, 0.14) 0%, transparent 55%),
+    rgba(255,255,255,0.05);
   border-color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 24px var(--accent-glow);
+  box-shadow:
+    0 12px 40px rgba(0,0,0,0.5),
+    0 0 6px var(--accent),
+    0 0 14px hsla(var(--hue), 100%, 60%, 0.6),
+    0 0 30px hsla(var(--hue), 100%, 60%, 0.35),
+    0 0 60px hsla(var(--hue), 100%, 60%, 0.15);
+  animation: card-breathe 4.5s ease-in-out 3.5s infinite;
 }
 
 .card:nth-child(1) { animation-delay: 0.05s; }
