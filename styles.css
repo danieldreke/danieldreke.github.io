@@ -217,7 +217,7 @@ body {
       0 0 14px hsla(var(--hue), 100%, 60%, 0.6),
       0 0 30px hsla(var(--hue), 100%, 60%, 0.35),
       0 0 60px hsla(var(--hue), 100%, 60%, 0.15);
-    animation: card-breathe 2.5s ease-in-out 0s infinite;
+    animation: card-breathe 3s ease-in-out 0s infinite;
   }
 }
 
